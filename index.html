@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 100 100"
+        preserveAspectRatio="none"
+      >
+        <defs>
+          <clipPath id="polymask" transform="scale(2, 2)">
+            <polyline
+              id="large"
+              class="poly"
+              fill="transparent"
+              points="0 20 100 0 100 80 0 50"
+            />
+          </clipPath>
+        </defs>
+        <polyline
+          id="large"
+          class="poly"
+          fill="transparent"
+          troke="red"
+          points="0 20 100 0 100 80 0 50"
+        />
+        <clipPath id="imgmask" transform="scale(10,10)">
+          <polyline
+            clip-path="url(#polymask)"
+            fill="transparent"
+            points="0 0 100 0 100 100 0 100"
+            transform="scale(0.333, 0.333)"
+          />
+        </clipPath>
+        <polyline
+          fill="transparent"
+          points="0 0 100 0 100 100 0 100"
+          transform="scale(0.333, 0.333), translate(100,0)"
+        />
+        <polyline
+          fill="transparent"
+          points="0 0 100 0 100 100 0 100"
+          transform="scale(0.333, 0.333), translate(200,0)"
+        />
+        <polyline
+          id="small"
+          class="fill"
+          points="0 0 100 0 100 100 0 100"
+          fill="transparent"
+          transform="scale(0.333, 0.333), translate(0,100)"
+        />
+      </svg>
+      <div class="gallery">
+        <img
+          src="https://res.cloudinary.com/makingthings/image/upload/q_10/v1555426724/Finland/lake-jump.jpg"
+          alt="Jumping in to Finish lake"
+        />
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
